@@ -31,7 +31,7 @@ public class LocationService: NSObject, CLLocationManagerDelegate {
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location: CLLocation = locations[0] as CLLocation
 
-        //manager.stopUpdatingLocation() // immediately stop in order to only retrieve it once
+        manager.stopUpdatingLocation() // immediately stop in order to only retrieve it once
         self.userLocation = Location(lat: location.coordinate.latitude, long: location.coordinate.longitude, name: self.userLocation.name)
         searchForAmenities(near: location.coordinate)
     }
@@ -52,60 +52,20 @@ public class LocationService: NSObject, CLLocationManagerDelegate {
     }
     
     func searchForAmenities(near coordinate: CLLocationCoordinate2D){
-        search(query: AmenityType.fire.rawValue, near: coordinate).start { (response, error) in
-            guard error == nil else {
-                print(error.debugDescription)
-                return
-            }
-            self.nearbyLocations.fireStations.locations = response?.mapItems ?? []
-        }
-        
-        search(query: AmenityType.police.rawValue, near: coordinate).start { (response, error) in
-            guard error == nil else {
-                print(error.debugDescription)
-                return
-            }
-            self.nearbyLocations.policeStations.locations = response?.mapItems ?? []
-        }
-        
-        search(query: AmenityType.school.rawValue, near: coordinate).start { (response, error) in
-            guard error == nil else {
-                print(error.debugDescription)
-                return
-            }
-            self.nearbyLocations.schools.locations = response?.mapItems ?? []
-        }
-        
-        search(query: AmenityType.hospitals.rawValue, near: coordinate).start { (response, error) in
-            guard error == nil else {
-                print(error.debugDescription)
-                return
-            }
-            self.nearbyLocations.hospitals.locations = response?.mapItems ?? []
-        }
-        
-        search(query: AmenityType.restaurants.rawValue, near: coordinate).start { (response, error) in
-            guard error == nil else {
-                print(error.debugDescription)
-                return
-            }
-            self.nearbyLocations.restaurants.locations = response?.mapItems ?? []
-        }
-        
-        search(query: AmenityType.parks.rawValue, near: coordinate).start { (response, error) in
-            guard error == nil else {
-                print(error.debugDescription)
-                return
-            }
-            self.nearbyLocations.parks.locations = response?.mapItems ?? []
+        nearbyLocations.sections.forEach{ amenitySection in
+            searchForLocations(amenitySection: amenitySection, near: coordinate)
         }
     }
     
-}
-
-extension MKPlacemark {
-    func getDistanceFromUser() -> Double {
-        // divide by 1609 to get distance in miles
-        return (location?.distance(from: LocationService.shared.userLocation.coordinateLocation) ?? 0) / 1609
+    func searchForLocations(amenitySection: AmenitySection, near coordinate: CLLocationCoordinate2D){
+        search(query: amenitySection.amenityType.rawValue, near: coordinate).start { (response, error) in
+            guard error == nil else {
+                print(error.debugDescription)
+                return
+            }
+            amenitySection.locations = response?.mapItems ?? []
+            amenitySection.locations.sort(by: {mapItem1, mapItem2 in return mapItem1.getDistanceFromUser() < mapItem2.getDistanceFromUser()})
+        }
     }
+    
 }

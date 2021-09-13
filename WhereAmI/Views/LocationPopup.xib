@@ -24,49 +24,37 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GqC-bw-hIW" userLabel="Spacer">
                                     <rect key="frame" x="0.0" y="0.0" width="8" height="102"/>
                                 </view>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VOw-Dk-NZA" userLabel="ButtonStack">
-                                    <rect key="frame" x="8" y="0.0" width="86" height="102"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOX-5C-inC" userLabel="ButtonContainer">
+                                    <rect key="frame" x="8" y="0.0" width="75" height="102"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOX-5C-inC" userLabel="ButtonContainer">
-                                            <rect key="frame" x="0.0" y="0.0" width="86" height="102"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="500" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1l-A5-qbF">
-                                                    <rect key="frame" x="4.5" y="10" width="77" height="82"/>
-                                                    <color key="backgroundColor" red="0.28876531119999999" green="0.076395876710000005" blue="0.55041998619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal">
-                                                        <imageReference key="image" image="location" catalog="system" symbolScale="large"/>
-                                                    </state>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="8"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="touched:" destination="-1" eventType="touchUpInside" id="heQ-Pb-b4P"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="w1l-A5-qbF" firstAttribute="width" secondItem="WOX-5C-inC" secondAttribute="width" multiplier="0.9" id="GBR-VD-HwY"/>
-                                                <constraint firstItem="w1l-A5-qbF" firstAttribute="centerY" secondItem="WOX-5C-inC" secondAttribute="centerY" id="MPq-9K-diM"/>
-                                                <constraint firstItem="w1l-A5-qbF" firstAttribute="centerX" secondItem="WOX-5C-inC" secondAttribute="centerX" id="Mul-RL-EmC"/>
-                                                <constraint firstItem="w1l-A5-qbF" firstAttribute="height" secondItem="WOX-5C-inC" secondAttribute="height" multiplier="0.8" id="fNI-1V-ncu"/>
-                                            </constraints>
-                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="500" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1l-A5-qbF">
+                                            <rect key="frame" x="4" y="10" width="67.5" height="82"/>
+                                            <color key="backgroundColor" red="0.095049329099999996" green="0.2329282761" blue="0.50954276320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal">
+                                                <color key="titleColor" red="0.66612619159999997" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <imageReference key="image" image="location" catalog="system" symbolScale="large"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="touched:" destination="-1" eventType="touchUpInside" id="heQ-Pb-b4P"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="WOX-5C-inC" firstAttribute="top" secondItem="VOw-Dk-NZA" secondAttribute="top" id="EPQ-UA-SeR"/>
-                                        <constraint firstItem="WOX-5C-inC" firstAttribute="centerX" secondItem="VOw-Dk-NZA" secondAttribute="centerX" id="FZK-I6-lrL"/>
-                                        <constraint firstItem="WOX-5C-inC" firstAttribute="height" secondItem="VOw-Dk-NZA" secondAttribute="height" id="WZr-qk-z1l"/>
-                                        <constraint firstItem="WOX-5C-inC" firstAttribute="leading" secondItem="VOw-Dk-NZA" secondAttribute="leading" id="gUV-hR-gbq"/>
-                                        <constraint firstItem="WOX-5C-inC" firstAttribute="centerY" secondItem="VOw-Dk-NZA" secondAttribute="centerY" id="mEv-lG-kAa"/>
-                                        <constraint firstItem="WOX-5C-inC" firstAttribute="width" secondItem="VOw-Dk-NZA" secondAttribute="width" id="uNz-Z5-5Tr"/>
+                                        <constraint firstItem="w1l-A5-qbF" firstAttribute="width" secondItem="WOX-5C-inC" secondAttribute="width" multiplier="0.9" id="GBR-VD-HwY"/>
+                                        <constraint firstItem="w1l-A5-qbF" firstAttribute="centerY" secondItem="WOX-5C-inC" secondAttribute="centerY" id="MPq-9K-diM"/>
+                                        <constraint firstItem="w1l-A5-qbF" firstAttribute="centerX" secondItem="WOX-5C-inC" secondAttribute="centerX" id="Mul-RL-EmC"/>
+                                        <constraint firstItem="w1l-A5-qbF" firstAttribute="height" secondItem="WOX-5C-inC" secondAttribute="height" multiplier="0.8" id="fNI-1V-ncu"/>
                                     </constraints>
-                                </stackView>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVq-Ic-vNb" userLabel="Spacer2">
-                                    <rect key="frame" x="94" y="0.0" width="20" height="102"/>
+                                    <rect key="frame" x="83" y="0.0" width="31" height="102"/>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rN8-9E-k9G" userLabel="LabelStack">
                                     <rect key="frame" x="114" y="0.0" width="300" height="102"/>
@@ -88,12 +76,10 @@
                                 </stackView>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="VOw-Dk-NZA" firstAttribute="leading" secondItem="xJs-Zd-7yM" secondAttribute="leading" constant="8" id="6xS-CJ-dkp"/>
-                                <constraint firstItem="VOw-Dk-NZA" firstAttribute="leading" secondItem="GqC-bw-hIW" secondAttribute="trailing" id="7bB-Ix-eG2"/>
-                                <constraint firstItem="fVq-Ic-vNb" firstAttribute="trailing" secondItem="VOw-Dk-NZA" secondAttribute="trailing" constant="20" id="Cob-Oa-b56"/>
+                                <constraint firstItem="WOX-5C-inC" firstAttribute="leading" secondItem="xJs-Zd-7yM" secondAttribute="leading" constant="8" id="Dt2-vh-7VV"/>
                                 <constraint firstAttribute="trailing" secondItem="rN8-9E-k9G" secondAttribute="trailing" id="Gub-vN-EIa"/>
                                 <constraint firstItem="rN8-9E-k9G" firstAttribute="leading" secondItem="xJs-Zd-7yM" secondAttribute="trailing" constant="-300" id="a9N-Gy-9AN"/>
-                                <constraint firstItem="fVq-Ic-vNb" firstAttribute="leading" secondItem="VOw-Dk-NZA" secondAttribute="trailing" id="r5Z-Av-L4O"/>
+                                <constraint firstItem="fVq-Ic-vNb" firstAttribute="leading" secondItem="xJs-Zd-7yM" secondAttribute="leading" constant="83" id="vv1-on-2se"/>
                                 <constraint firstItem="GqC-bw-hIW" firstAttribute="leading" secondItem="xJs-Zd-7yM" secondAttribute="leading" id="zo6-M4-Nyh"/>
                             </constraints>
                         </stackView>

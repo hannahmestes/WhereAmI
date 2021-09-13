@@ -15,6 +15,7 @@
 		F18FC73B26EEC9980090CF51 /* LocationPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FC73A26EEC9980090CF51 /* LocationPopupView.swift */; };
 		F18FC73F26EF05480090CF51 /* LocationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FC73E26EF05480090CF51 /* LocationCellView.swift */; };
 		F18FC74526EF23870090CF51 /* Amenities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FC74426EF23870090CF51 /* Amenities.swift */; };
+		F18FC74926EFEAE10090CF51 /* MKExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FC74826EFEAE10090CF51 /* MKExtensions.swift */; };
 		F1A76D0926ED8712003DAA0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A76D0826ED8712003DAA0D /* AppDelegate.swift */; };
 		F1A76D0B26ED8712003DAA0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A76D0A26ED8712003DAA0D /* SceneDelegate.swift */; };
 		F1A76D0D26ED8712003DAA0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A76D0C26ED8712003DAA0D /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 		F18FC73A26EEC9980090CF51 /* LocationPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPopupView.swift; sourceTree = "<group>"; };
 		F18FC73E26EF05480090CF51 /* LocationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellView.swift; sourceTree = "<group>"; };
 		F18FC74426EF23870090CF51 /* Amenities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amenities.swift; sourceTree = "<group>"; };
+		F18FC74826EFEAE10090CF51 /* MKExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKExtensions.swift; sourceTree = "<group>"; };
 		F1A76D0526ED8712003DAA0D /* WhereAmI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereAmI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A76D0826ED8712003DAA0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1A76D0A26ED8712003DAA0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		F18FC74726EFEACD0090CF51 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F18FC74826EFEAE10090CF51 /* MKExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F1A76CFC26ED8712003DAA0D = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +126,7 @@
 				F18FC72E26EE8BD60090CF51 /* ViewControllers */,
 				F18FC74626EF25130090CF51 /* Models */,
 				F18FC73326EE8F210090CF51 /* Services */,
+				F18FC74726EFEACD0090CF51 /* Extensions */,
 				F1A76D1126ED8713003DAA0D /* Assets.xcassets */,
 				F1A76D1326ED8713003DAA0D /* LaunchScreen.storyboard */,
 				F1A76D1626ED8713003DAA0D /* Info.plist */,
@@ -196,6 +207,7 @@
 			files = (
 				F18FC73026EE8D0F0090CF51 /* LocateViewController.swift in Sources */,
 				F18FC73F26EF05480090CF51 /* LocationCellView.swift in Sources */,
+				F18FC74926EFEAE10090CF51 /* MKExtensions.swift in Sources */,
 				F18FC73B26EEC9980090CF51 /* LocationPopupView.swift in Sources */,
 				F18FC74526EF23870090CF51 /* Amenities.swift in Sources */,
 				F1A76D0D26ED8712003DAA0D /* ViewController.swift in Sources */,
@@ -353,6 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JE57NZG858;
 				INFOPLIST_FILE = WhereAmI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,6 +386,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JE57NZG858;
 				INFOPLIST_FILE = WhereAmI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

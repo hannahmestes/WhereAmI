@@ -12,17 +12,17 @@ import MapKit
 
 class Amenities: NSObject {
     var sections: [AmenitySection] {
-        [fireStations,
-        policeStations,
-        schools,
-        hospitals,
-        restaurants,
-        parks]
+        [cafes,
+         restaurants,
+         parks,
+         hospitals,
+         policeStations,
+         fireStations]
     }
     
     var fireStations: AmenitySection = AmenitySection(name: .fire)
     var policeStations: AmenitySection = AmenitySection(name: .police)
-    var schools: AmenitySection = AmenitySection(name: .school)
+    var cafes: AmenitySection = AmenitySection(name: .cafes)
     var hospitals: AmenitySection = AmenitySection(name: .hospitals)
     var restaurants: AmenitySection = AmenitySection(name: .restaurants)
     var parks: AmenitySection = AmenitySection(name: .parks)
@@ -32,7 +32,7 @@ class Amenities: NSObject {
 enum AmenityType: String {
     case fire = "Fire Stations"
     case police = "Police Stations"
-    case school = "Schools"
+    case cafes = "Cafes"
     case hospitals = "Hospitals"
     case restaurants = "Restaurants"
     case parks = "Parks"

@@ -13,17 +13,12 @@ class NearbyViewController: UITableViewController {
     
     var amenities: Amenities = Amenities()
     var locationService: LocationService = LocationService.shared
-    let tableHeaders = [AmenityType.fire,
-                        AmenityType.police,
-                        AmenityType.school,
-                        AmenityType.hospitals,
-                        AmenityType.restaurants,
-                        AmenityType.parks]
     
     override func viewWillAppear(_ animated: Bool) {
         amenities = locationService.nearbyLocations
     }
     
+    // location cell contents
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath)
 
