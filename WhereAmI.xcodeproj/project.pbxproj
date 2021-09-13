@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F18FC73026EE8D0F0090CF51 /* LocateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FC72F26EE8D0F0090CF51 /* LocateViewController.swift */; };
+		F18FC73226EE8D3C0090CF51 /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FC73126EE8D3C0090CF51 /* NearbyViewController.swift */; };
+		F18FC73526EE8F460090CF51 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FC73426EE8F460090CF51 /* LocationService.swift */; };
+		F18FC73726EE957D0090CF51 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FC73626EE957D0090CF51 /* Location.swift */; };
+		F18FC73926EEBB960090CF51 /* LocationPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18FC73826EEBB960090CF51 /* LocationPopup.xib */; };
+		F18FC73B26EEC9980090CF51 /* LocationPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FC73A26EEC9980090CF51 /* LocationPopupView.swift */; };
+		F18FC73F26EF05480090CF51 /* LocationCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FC73E26EF05480090CF51 /* LocationCellView.swift */; };
+		F18FC74526EF23870090CF51 /* Amenities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18FC74426EF23870090CF51 /* Amenities.swift */; };
 		F1A76D0926ED8712003DAA0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A76D0826ED8712003DAA0D /* AppDelegate.swift */; };
 		F1A76D0B26ED8712003DAA0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A76D0A26ED8712003DAA0D /* SceneDelegate.swift */; };
 		F1A76D0D26ED8712003DAA0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A76D0C26ED8712003DAA0D /* ViewController.swift */; };
@@ -16,6 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F18FC72F26EE8D0F0090CF51 /* LocateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateViewController.swift; sourceTree = "<group>"; };
+		F18FC73126EE8D3C0090CF51 /* NearbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
+		F18FC73426EE8F460090CF51 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		F18FC73626EE957D0090CF51 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		F18FC73826EEBB960090CF51 /* LocationPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationPopup.xib; sourceTree = "<group>"; };
+		F18FC73A26EEC9980090CF51 /* LocationPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPopupView.swift; sourceTree = "<group>"; };
+		F18FC73E26EF05480090CF51 /* LocationCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellView.swift; sourceTree = "<group>"; };
+		F18FC74426EF23870090CF51 /* Amenities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amenities.swift; sourceTree = "<group>"; };
 		F1A76D0526ED8712003DAA0D /* WhereAmI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereAmI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A76D0826ED8712003DAA0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1A76D0A26ED8712003DAA0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +53,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F18FC72B26EE85B00090CF51 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F18FC73826EEBB960090CF51 /* LocationPopup.xib */,
+				F18FC73A26EEC9980090CF51 /* LocationPopupView.swift */,
+				F18FC73E26EF05480090CF51 /* LocationCellView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F18FC72E26EE8BD60090CF51 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F18FC72F26EE8D0F0090CF51 /* LocateViewController.swift */,
+				F18FC73126EE8D3C0090CF51 /* NearbyViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F18FC73326EE8F210090CF51 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F18FC73426EE8F460090CF51 /* LocationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F18FC74626EF25130090CF51 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F18FC73626EE957D0090CF51 /* Location.swift */,
+				F18FC74426EF23870090CF51 /* Amenities.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F1A76CFC26ED8712003DAA0D = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +112,10 @@
 				F1A76D0A26ED8712003DAA0D /* SceneDelegate.swift */,
 				F1A76D0C26ED8712003DAA0D /* ViewController.swift */,
 				F1A76D0E26ED8712003DAA0D /* Main.storyboard */,
+				F18FC72B26EE85B00090CF51 /* Views */,
+				F18FC72E26EE8BD60090CF51 /* ViewControllers */,
+				F18FC74626EF25130090CF51 /* Models */,
+				F18FC73326EE8F210090CF51 /* Services */,
 				F1A76D1126ED8713003DAA0D /* Assets.xcassets */,
 				F1A76D1326ED8713003DAA0D /* LaunchScreen.storyboard */,
 				F1A76D1626ED8713003DAA0D /* Info.plist */,
@@ -124,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F18FC73926EEBB960090CF51 /* LocationPopup.xib in Resources */,
 				F1A76D1526ED8713003DAA0D /* LaunchScreen.storyboard in Resources */,
 				F1A76D1226ED8713003DAA0D /* Assets.xcassets in Resources */,
 				F1A76D1026ED8712003DAA0D /* Main.storyboard in Resources */,
@@ -137,9 +194,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F18FC73026EE8D0F0090CF51 /* LocateViewController.swift in Sources */,
+				F18FC73F26EF05480090CF51 /* LocationCellView.swift in Sources */,
+				F18FC73B26EEC9980090CF51 /* LocationPopupView.swift in Sources */,
+				F18FC74526EF23870090CF51 /* Amenities.swift in Sources */,
 				F1A76D0D26ED8712003DAA0D /* ViewController.swift in Sources */,
+				F18FC73226EE8D3C0090CF51 /* NearbyViewController.swift in Sources */,
 				F1A76D0926ED8712003DAA0D /* AppDelegate.swift in Sources */,
+				F18FC73526EE8F460090CF51 /* LocationService.swift in Sources */,
 				F1A76D0B26ED8712003DAA0D /* SceneDelegate.swift in Sources */,
+				F18FC73726EE957D0090CF51 /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +357,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = hannahestes.WhereAmI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -312,6 +377,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = hannahestes.WhereAmI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
