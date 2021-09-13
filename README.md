@@ -20,8 +20,8 @@ Where Am I uses only native iOS services and frameworks. No setup needed! 🎉
 
 ### Future Improvements
 
-- [] Custom location search categories
-- [] Overlay locations on the map
-- [] Improve handling of nil location
-- [] Improve handling of permission denial
+- [ ] Custom location search categories
+- [ ] Overlay locations on the map
+- [ ] Improve handling of nil location
+- [ ] Improve handling of permission denial
 
